@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Write a C program to check whether a given number is within 2 of a multiple of 10
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int Test(int num)
+{
+    if(num % 10 == 2 || num % 10 == 8)
+    {
+        return 1;
+    }
+    else
+        return 0;
+}
+
+int main()
+{
+    int number;
+    printf("Enter number : ");
+    scanf("%d", &number);
+    if(Test(number))
+    {
+        printf("Test Passed");
+    }
+    else
+    {
+        printf("Test Failed");
+    }
+}
