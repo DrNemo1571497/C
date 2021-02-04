@@ -1,0 +1,31 @@
+/* 
+Write a C program to check two given integers, and return true if one of them is 30 or if their sum is 30.
+
+*/
+
+#include<stdio.h>
+
+int logic(int x, int y)
+{
+    if (x == 30 || y == 30 || x+y == 30)
+    {
+        return 1;
+    }
+}
+int main()
+{
+        int a, b, result;
+        printf("Enter 1st integer : ");
+        scanf("%d", &a);
+        
+        printf("Enter 2nd integer : ");
+        scanf("%d", &b);
+        
+        result = logic(a,b);
+        if(result == 1)
+        {
+            printf("TRUE");
+        }
+        else
+            printf("FALSE");
+}
