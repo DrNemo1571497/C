@@ -1,0 +1,25 @@
+/******************************************************************************
+
+Write a C program to compute the sum of the two given integers. If one of the given integer value is in the range 10..20 inclusive return 18.
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int Test(int num1, int num2)
+{
+
+    return (num1 >= 10 && num1 <= 20) || (num2 >= 10 && num2 <= 20) ? 18 : num1 + num2;
+        
+}
+
+int main()
+{
+    int number1, number2;
+    printf("Enter 1st number : ");
+    scanf("%d", &number1);
+    printf("Enter 2nd number : ");
+    scanf("%d", &number2);
+    printf("%d", Test(number1, number2));
+    return 0;
+}
