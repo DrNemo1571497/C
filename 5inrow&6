@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Write a C program to count the number of two 5's are next to each other in an array of integers. Also count the situation where the second 5 is actually a 6.
+
+*******************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int *a, i, j, n;
+    int count = 0;
+    
+    printf("Enter size of an array ");
+    scanf("%d", &n);
+    
+    a = (int*) malloc(n * sizeof(int));
+    
+    printf("Please enter %d elements in an array : \n", n);
+    for(i = 0; i < n; i++)
+    {
+        printf("element - %d : ", i+1);
+        scanf("%d", a+i);
+    }
+    
+    for(i = 0; i < n; i++)
+    {
+        if (*(a+i) == 5 && (*(a+i+1) == 5 || *(a+i+1) == 6))
+        {
+            count = count + 1;
+        }
+    }
+    
+    printf("%d", count);
+}
