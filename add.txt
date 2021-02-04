@@ -1,0 +1,22 @@
+/* Write a C program to compute the sum of the two given integer values. If the two values are the same, then return triple their sum. Go to the editor
+Expected Output:
+
+3
+12
+*/
+
+#include<stdio.h>
+
+int main()
+{
+    int a, b, result;
+    printf("Enter 1st number : ");
+    scanf("%d", &a);
+    
+    printf("Enter 2nd number : ");
+    scanf("%d", &b);
+    
+    result = (a == b ? 3*(a + b) : a + b);
+    
+    printf("result is %d", result);
+}
