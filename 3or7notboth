@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Write a C program to check whether a given non-negative number is a multiple of 3 or 7, but not both.
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int Test(int num)
+{
+    if((!(num % 7 == 0) && (num % 3 == 0)) || ((num % 7 == 0) && !(num % 3 == 0) ))
+    {
+        return 1;
+    }
+    else
+        return 0;
+}
+
+int main()
+{
+    int number;
+    printf("Enter number : ");
+    scanf("%d", &number);
+    if(Test(number))
+    {
+        printf("Test Passed");
+    }
+    else
+    {
+        printf("Test Failed");
+    }
+}
