@@ -1,0 +1,48 @@
+/******************************************************************************
+
+Write a C program to check if a triple is presents in an array of integers or not. If a value appears three times in a row in an array it is called a triple.
+
+*******************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int triple(int *arr, int n)
+{
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(*(arr+i) == *(arr+i+1) && *(arr+i) == *(arr+i+2))
+        {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+
+
+int main()
+{
+    int *a, size;
+    printf("Enter number of elements of array : ");
+    scanf("%d", &size);
+    
+    printf("Please enter %d elements in the array : \n", size);
+    
+    a = (int*)malloc(size * sizeof(int));
+    for(int i = 0; i < size; i++)
+    {
+        printf("element - %d : ", i+1);
+        scanf("%d", a+i);
+    }
+    
+    if(triple(a, size) > 0)
+    {
+        printf("There are total %d triples", triple(a, size));
+    }
+    
+    else
+    {
+        printf("No Triple");
+    }
+}
