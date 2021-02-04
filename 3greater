@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Write a C program to check whether y is greater than x, and z is greater than y from three given integers x,y,z
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int Test(int num1, int num2, int num3)
+{
+
+    if(num2 > num1 && num3 > num2)
+    {
+        return 1;
+    }
+    else
+        return 0;
+        
+}
+
+int main()
+{
+    int number1, number2, number3;
+    printf("Enter 1st number : ");
+    scanf("%d", &number1);
+    printf("Enter 2nd number : ");
+    scanf("%d", &number2);
+    printf("Enter 3rd number : ");
+    scanf("%d", &number3);
+    printf("%d", Test(number1, number2, number3));
+    return 0;
+}
