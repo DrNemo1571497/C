@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Write a C program to check two given integers whether either of them is in the range 100..200 inclusive
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int between(int x, int y)
+{
+    if(x >= 100 && x <= 200 || y >= 100 && y <= 200)
+    {
+        printf("TRUE");
+    }
+    
+    else
+    
+        printf("FLASE");
+
+}
+
+int main()
+{
+    int a, b;
+    printf("Enter 1st integer : ");
+    scanf("%d", &a);
+    
+    printf("Enter 2nd integer : ");
+    scanf("%d", &b);
+    
+    between(a, b);
+}
