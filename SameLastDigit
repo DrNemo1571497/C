@@ -1,0 +1,37 @@
+/******************************************************************************
+
+Write a C program to check if two given non-negative integers have the same last digit.
+
+*******************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int test(int x, int y)
+{
+    int rem1, rem2;
+    rem1 = x % 10;
+    rem2 = y % 10;
+    
+    if(rem1 == rem2)
+    {
+        printf("Both have same last digit");
+    }
+    
+    else
+    {
+        printf("Different last digit");
+    }
+}
+
+int main()
+{
+    int a, b, result;
+    printf("Enter 1st number : ");
+    scanf("%d", &a);
+    
+    printf("Enter 2nd number : ");
+    scanf("%d", &b);
+    
+    test(a, b);
+}
