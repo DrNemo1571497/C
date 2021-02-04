@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Write a C program to to test whether a given non-negative number is a multiple of 13 or it is one more than a multiple of 13
+
+*******************************************************************************/
+
+#include<stdio.h>
+
+int Test(int num)
+{
+    if(num % 13 == 0 || (num % 13 == 1))
+    {
+        return 1;
+    }
+    else
+        return 0;
+}
+
+int main()
+{
+    int number;
+    printf("Enter number : ");
+    scanf("%d", &number);
+    if(Test(number))
+    {
+        printf("Test Passed");
+    }
+    else
+    {
+        printf("Test Failed");
+    }
+}
