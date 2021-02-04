@@ -1,0 +1,37 @@
+/******************************************************************************
+
+Write a C program to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal from 100.
+
+*******************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int check(int x, int y)
+{
+    if (abs(100 - x) > abs(100 - y))
+    {
+        printf("%d is nearest to 100", y);
+    }
+    
+    else if(abs(100 - x) < abs(100 - y))
+    {
+        printf("%d is nearest to 100", x);
+    }
+    else if (abs(100 - x) == abs(100 - y))
+    {
+        printf("FALSE");
+    }
+}
+
+int main()
+{
+    int a, b;
+    printf("Enter 1st number : ");
+    scanf("%d", &a);
+    
+    printf("Enter 2nd number : ");
+    scanf("%d", &b);
+    
+    check(a, b);
+}
