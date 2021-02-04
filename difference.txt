@@ -1,0 +1,21 @@
+/* 
+Write a C program to get the absolute difference between n and 51. If n is greater than 51 return triple the absolute difference. 
+Expected Output:
+
+6
+21
+0
+*/
+
+#include<stdio.h>
+
+int main()
+{
+    int a, result;
+    printf("Enter the number : ");
+    scanf("%d", &a);
+    
+    result = (a > 51 ? 3*(a - 51) : 51 - a);
+    
+    printf("result is %d", result);
+}
