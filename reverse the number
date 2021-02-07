@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+    int a = 54687;
+    int rev_num = 0;
+    int rem;
+    int temp = a;
+    
+    while (temp != 0)
+    {
+        rem = temp % 10;
+        rev_num = rev_num * 10 + rem;
+        temp = temp / 10;
+    }
+    printf("Reverse of %d is %d", a, rev_num);
+}
