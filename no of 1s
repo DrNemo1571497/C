@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+    int a[5] = {1,2,5,1,2};
+    int i;
+    int count = 0;
+    
+    for(i = 0; i<5; i++)
+    {
+        if(a[i] == 1)
+        {
+            count = count + 1;
+        }
+    }
+    printf("Number of 1s are %d", count);
+    return 0;
+}
