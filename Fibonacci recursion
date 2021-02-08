@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int fib(int n)
+{
+    if (n <= 1)
+    {
+        return n;           // mp
+    }
+    
+    else 
+    {
+        return fib(n-1) + fib(n-2); 
+    }
+}
+
+int main()
+{
+    int number;
+    printf("Enter number : ");
+    scanf("%d", &number);
+    printf("%d", fib(number));
+    return 0;
+}
