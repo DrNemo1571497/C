@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void main()
+{
+    int i, j;
+    
+    for(i = 0; i < 5; i++)              //horizontal
+    {
+        for(j = 0; j < 3; j++)          // vertical
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+
+
+#include<stdio.h>
+
+void main()
+{
+    int i, j;
+    
+    for(i = 0; i < 5; i++)              //horizontal
+    {
+        for(j = 0; j <= i; j++)          // vertical
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
