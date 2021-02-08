@@ -1,0 +1,43 @@
+//Program to swap adjacent elements of one dimension array.
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 100
+
+int main()
+{
+    int *arr, n, i;
+    int temp;
+    
+    printf("Enter total number of elements : ");
+    scanf("%d", &n);
+    
+    if(n%2 != 0)
+    {
+        printf("Total number of elements should be even\n");
+    }
+    
+    else
+    {
+        arr = (int*) malloc(n * sizeof(int));
+        printf("Enter %d number of array elements \n", n);  
+        for(i = 0; i < n; i++)
+        {
+            printf("Enter Element - %d : ", i+1);
+            scanf("%d", arr + i);
+        }
+        
+            for(i = 0; i < n; i = i+2)
+    {
+        temp = *(arr + i);
+        *(arr + i) = *(arr + i + 1); 
+        *(arr + i + 1) = temp;
+    }
+    
+    printf("Array elements after swapping are \n");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", *(arr + i));
+    }
+    }
+    return 0;
+}
